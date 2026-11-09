@@ -1,0 +1,48 @@
+// Data model for the Ajaia document editor.
+// Postgres in every environment (local Docker / Neon) so dev matches prod.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL") // pooled connection (runtime)
+  directUrl = env("DATABASE_URL_UNPOOLED") // direct connection (migrations)
+}
+
+model User {
+  id           String     @id @default(cuid())
+  name         String
+  email        String     @unique
+  passwordHash String
+  createdAt    DateTime   @default(now())
+  documents    Document[]
+  shares       Share[]
+}
+
+model Document {
+  id        String   @id @default(cuid())
+  title     String
+  /// TipTap/ProseMirror JSON document ({ type: "doc", content: [...] })
+  content   Json
+  ownerId   String
+  owner     User     @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  shares    Share[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([ownerId, updatedAt])
+}
+
+model Share {
+  id         String   @id @default(cuid())
+  documentId String
+  document   Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt  DateTime @default(now())
+
+  @@unique([documentId, userId])
+  @@index([userId])
+}

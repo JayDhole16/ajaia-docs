@@ -1,0 +1,8 @@
+Weekly sync - notes
+
+Attendees: Alice, Bob
+Decision: ship the editor first, polish second.
+
+Action items
+- Alice: share the brief with Bob
+- Bob: review and edit

@@ -1,0 +1,6 @@
+# Never upload local env files or dev artifacts with `vercel` deploys
+.env
+.env.*
+!.env.example
+node_modules
+.next
