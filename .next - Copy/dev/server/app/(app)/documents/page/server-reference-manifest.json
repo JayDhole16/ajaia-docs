@@ -1,0 +1,45 @@
+{
+  "node": {
+    "003bc1bdc40d85b5b5515515ca28dc2a989bc1f0b9": {
+      "workers": {
+        "app/(app)/documents/page": {
+          "moduleId": "[project]/.next-internal/server/app/(app)/documents/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/actions/documents.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "exportedName": "logoutAction",
+      "filename": "src/actions/auth.ts"
+    },
+    "6083780917dfe5289ec9d0e62e005b7b0cb34f1a9c": {
+      "workers": {
+        "app/(app)/documents/page": {
+          "moduleId": "[project]/.next-internal/server/app/(app)/documents/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/actions/documents.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "exportedName": "loginAction",
+      "filename": "src/actions/auth.ts"
+    },
+    "40ac5219da2929042e7821655e6c6a21cd51c65e2e": {
+      "workers": {
+        "app/(app)/documents/page": {
+          "moduleId": "[project]/.next-internal/server/app/(app)/documents/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/actions/documents.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "exportedName": "importDocumentAction",
+      "filename": "src/actions/documents.ts"
+    },
+    "0040e690369c986ac31e3963f4e388f48f29760fae": {
+      "workers": {
+        "app/(app)/documents/page": {
+          "moduleId": "[project]/.next-internal/server/app/(app)/documents/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/actions/documents.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "exportedName": "createDocumentAction",
+      "filename": "src/actions/documents.ts"
+    }
+  },
+  "edge": {}
+}

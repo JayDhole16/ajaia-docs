@@ -71,8 +71,15 @@ export function DocumentEditor({ documentId, initialContent }: { documentId: str
     try {
       // Sent as a string on purpose — see saveDocumentContentAction.
       result = await saveDocumentContentAction(documentId, JSON.stringify(editor.getJSON()));
-    } catch {
-      result = { ok: false, error: "Couldn't reach the server. Check your connection." };
+    } catch (error) {
+      // After a new deploy, an old tab's action id no longer exists on the server.
+      const outdated = error instanceof Error && error.message.includes("Failed to find Server Action");
+      result = {
+        ok: false,
+        error: outdated
+          ? "This page is out of date. Copy any unsaved text, then reload the page."
+          : "Couldn't reach the server. Check your connection.",
+      };
     }
     inFlight.current = false;
 

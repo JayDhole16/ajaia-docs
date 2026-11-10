@@ -69,7 +69,10 @@ export async function saveDocumentContentAction(
 ): Promise<ActionResult<{ updatedAt: string }>> {
   const user = await requireUser();
   return runAction(async () => {
-    if (typeof contentJson !== "string") throw new AppError("VALIDATION", "Invalid document content.");
+    if (typeof contentJson !== "string") {
+      // Only an outdated client (a tab opened before a deploy) sends a non-string.
+      throw new AppError("VALIDATION", "This page is out of date. Copy any unsaved text, then reload the page.");
+    }
     if (contentJson.length > MAX_CONTENT_BYTES) {
       throw new AppError("VALIDATION", "Document is too large to save (limit is about 1.5 MB).");
     }
