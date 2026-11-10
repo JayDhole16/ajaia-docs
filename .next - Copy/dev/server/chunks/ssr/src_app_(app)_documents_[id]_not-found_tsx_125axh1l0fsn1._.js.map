@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/New%20folder%20(2)/AJAIA_Assessment/src/app/(app)/documents/[id]/not-found.tsx"],"sourcesContent":["import Link from \"next/link\";\n\nexport default function DocumentNotFound() {\n  return (\n    <div className=\"mx-auto max-w-lg px-4 py-16 text-center\">\n      <h1 className=\"text-xl font-semibold text-gray-900\">Document not available</h1>\n      <p className=\"mt-2 text-sm text-gray-500\">\n        This document doesn&apos;t exist, was deleted, or hasn&apos;t been shared with you. Ask the owner to share it\n        with your account.\n      </p>\n      <Link href=\"/documents\" className=\"mt-6 inline-block text-sm font-medium text-blue-600 hover:underline\">\n        Back to documents\n      </Link>\n    </div>\n  );\n}\n"],"names":["DocumentNotFound","className","href"],"mappings":";;;;;AAAA;;;AAEe,SAASA;IACtB,qBACE,8OAAC;QAAIC,WAAU;;0BACb,8OAAC;gBAAGA,WAAU;0BAAsC;;;;;;0BACpD,8OAAC;gBAAEA,WAAU;0BAA6B;;;;;;0BAI1C,8OAAC,0LAAI;gBAACC,MAAK;gBAAaD,WAAU;0BAAsE;;;;;;;;;;;;AAK9G"}}]
-}

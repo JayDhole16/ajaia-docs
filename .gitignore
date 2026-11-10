@@ -50,3 +50,12 @@ next-env.d.ts
 # playwright
 /test-results/
 /playwright-report/
+
+# accidental Windows copies / build-cache copies
+/.next*/
+* - Copy*
+
+# local-only AI prompt / agent instruction files (kept out of the repo)
+/0[0-7]-*.md
+/AGENTS.md
+/CLAUDE.md
